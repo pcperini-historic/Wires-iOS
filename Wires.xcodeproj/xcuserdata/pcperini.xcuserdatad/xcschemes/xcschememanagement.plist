@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Notification - Wires WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Wires WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Wires.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +22,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>73D9862C1AE80FDB0053893C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>73DACB531AE5ED750059AFDD</key>
 		<dict>
 			<key>primary</key>

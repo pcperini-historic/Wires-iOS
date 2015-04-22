@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Types
     enum NotificationType: String {
         case Headline = "com.pcperini.Wires.headline"
+        case Default = "com.pcperini.Wires.default"
     }
     
     // MARK: Properties
