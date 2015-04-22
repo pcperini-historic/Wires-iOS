@@ -68,11 +68,9 @@ extension ViewController: DialogueViewDelegate {
     }
     
     func dialogueView(dialogueView: DialogueView, didFinishLines lines: [String]) {
-        let userNotificationTypes: UIUserNotificationType = (UIUserNotificationType.Alert | UIUserNotificationType.Sound)
-        let userNotificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
-        
-        UIApplication.sharedApplication().registerUserNotificationSettings(userNotificationSettings)
-        UIApplication.sharedApplication().registerForRemoteNotifications()
+        if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+            appDelegate.registerForRemoteNotifications()
+        }
     }
 }
 
@@ -80,7 +78,6 @@ extension ViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         if let g1 = gestureRecognizer as? UILongPressGestureRecognizer {
             if let g2 = otherGestureRecognizer as? UILongPressGestureRecognizer {
-                println(contains(self.circleLongPressRecognizers, g1) && contains(self.circleLongPressRecognizers, g2))
                 return contains(self.circleLongPressRecognizers, g1) && contains(self.circleLongPressRecognizers, g2)
             }
         }

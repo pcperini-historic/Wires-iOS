@@ -19,6 +19,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     // MARK: Device Token Handlers
+    func registerForRemoteNotifications() {
+        // Settings
+        let userNotificationTypes: UIUserNotificationType = (UIUserNotificationType.Alert | UIUserNotificationType.Sound)
+        
+        let openAction = UIMutableUserNotificationAction()
+        openAction.identifier = "openURL:"
+        openAction.title = "Source"
+        openAction.activationMode = UIUserNotificationActivationMode.Foreground
+        openAction.authenticationRequired = false
+        openAction.destructive = false
+        
+        let headlineCategory = UIMutableUserNotificationCategory()
+        headlineCategory.identifier = NotificationType.Headline.rawValue
+        headlineCategory.setActions([openAction], forContext: UIUserNotificationActionContext.Default)
+        
+        let userNotificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: Set([headlineCategory]))
+        UIApplication.sharedApplication().registerUserNotificationSettings(userNotificationSettings)
+        
+        // Notifications
+        UIApplication.sharedApplication().registerForRemoteNotifications()        
+    }
+    
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         // Use http://api.shephertz.com/tutorial/Push-Notification-iOS/ for Push help
         
@@ -47,15 +69,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        println(userInfo)
         switch userInfo["notificationType"] as! String {
         case NotificationType.Headline.rawValue:
-            if let sourceURL = userInfo["sourceURL"] as? String {
-                UIApplication.sharedApplication().openURL(NSURL(string: sourceURL)!)
-            }
+            self.openHeadlineFromRemoteNotification(userInfo)
             
         default:
             break
+        }
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
+        switch identifier! {
+        case "openURL:":
+            self.openHeadlineFromRemoteNotification(userInfo)
+            
+        default:
+            break
+        }
+        
+        completionHandler()
+    }
+    
+    func openHeadlineFromRemoteNotification(userInfo: [NSObject: AnyObject]) {
+        dispatch_async(dispatch_get_main_queue()) {
+            if let sourceURL = userInfo["sourceURL"] as? String {
+                UIApplication.sharedApplication().openURL(NSURL(string: sourceURL)!)
+            }
         }
     }
     
