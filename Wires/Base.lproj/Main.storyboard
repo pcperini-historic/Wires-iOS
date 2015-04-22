@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Wires" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqC-37-1Bv" customClass="ShapeView" customModule="Wires" customModuleProvider="target">
+                                <rect key="frame" x="-49" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0hH-OB-P2Q"/>
+                                    <constraint firstAttribute="width" constant="100" id="afm-5x-IEb"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3Qd-on-kmp" appends="YES" id="558-zr-6FU"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECF-1K-46o" customClass="ShapeView" customModule="Wires" customModuleProvider="target">
+                                <rect key="frame" x="549" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="NLJ-Uk-srG"/>
+                                    <constraint firstAttribute="width" constant="100" id="mvE-bp-zzQ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bEM-ts-FkA" appends="YES" id="fYz-dt-icJ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ZH-FQ-nml" customClass="PulseView" customModule="Wires" customModuleProvider="target">
+                                <rect key="frame" x="175" y="175" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Afternoon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lci-oy-ddh" customClass="DialogueView" customModule="Wires" customModuleProvider="target">
+                                <rect key="frame" x="150" y="490" width="300" height="90"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="loopsDialogue" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animates" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31372549019607843" green="0.8901960784313725" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="yqC-37-1Bv" secondAttribute="centerY" id="Bjq-ko-ue2"/>
+                            <constraint firstAttribute="centerX" secondItem="6ZH-FQ-nml" secondAttribute="centerX" constant="-0.5" id="Mus-aW-PX1"/>
+                            <constraint firstAttribute="centerY" secondItem="ECF-1K-46o" secondAttribute="centerY" id="SO3-fC-ZSD"/>
+                            <constraint firstItem="yqC-37-1Bv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-65" id="U9P-6x-okk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ECF-1K-46o" secondAttribute="trailing" constant="-65" id="Ud7-Tr-GbE"/>
+                            <constraint firstAttribute="centerY" secondItem="6ZH-FQ-nml" secondAttribute="centerY" constant="0.5" id="VWP-gW-299"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Lci-oy-ddh" secondAttribute="bottom" constant="20" id="lwm-AO-5Ek"/>
+                            <constraint firstAttribute="centerX" secondItem="Lci-oy-ddh" secondAttribute="centerX" id="mNO-Pi-ZaI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dialogueView" destination="Lci-oy-ddh" id="PNd-ON-6Yx"/>
+                        <outlet property="pulseView" destination="6ZH-FQ-nml" id="1b6-uL-ZNM"/>
+                        <outletCollection property="circleLongPressRecognizers" destination="3Qd-on-kmp" collectionClass="NSMutableArray" id="STp-lu-TQk"/>
+                        <outletCollection property="circleLongPressRecognizers" destination="bEM-ts-FkA" collectionClass="NSMutableArray" id="GK5-zp-nae"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="3Qd-on-kmp">
+                    <connections>
+                        <action selector="gestureWasRecognized:" destination="vXZ-lx-hvc" id="s03-KV-Dly"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="xDw-No-JzJ"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="bEM-ts-FkA">
+                    <connections>
+                        <action selector="gestureWasRecognized:" destination="vXZ-lx-hvc" id="yIy-Dz-vxm"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="QUp-n9-9Zf"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="226" y="341"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02D3CCA385B1847DD98CAC32 /* PCHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4211D473F9417282071EEB2E /* PCHTTPClient.h */; };
+		05BB42EA5A0563ACFC3A919F /* PCHTTPBatchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 631D6F386915C92C81F616ED /* PCHTTPBatchClient.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1C32E82A1FA79A95D126B1F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C717E1F402F188441EA6C3B4 /* Foundation.framework */; };
+		202BB2DED663D7F6B210FE99 /* PCHTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C99EECB73BCF98D531A0EA8 /* PCHTTP.h */; };
+		338964CA311AF15C7623A0DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C717E1F402F188441EA6C3B4 /* Foundation.framework */; };
+		43447D2056494BBB8B365356 /* PCHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8870CE0AD197BF291C8DD /* PCHTTPResponse.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		49B0C06556A78C4F723DA74D /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CED9D11E5F9A1A89DE40E1EB /* Pods-dummy.m */; };
+		5466EBBF4C483EBDC43D2CE7 /* PCHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B348C9F758D311D7EEC95C5 /* PCHTTPClient.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B165591994C579A333C46624 /* PCHTTPBatchClient.h in Headers */ = {isa = PBXBuildFile; fileRef = BBC50C32E968FB5A7A4711AE /* PCHTTPBatchClient.h */; };
+		BA61F2E5C3109C4AB98C64E0 /* Pods-PCHTTP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFC61DFF4957FCB45ABBC0 /* Pods-PCHTTP-dummy.m */; };
+		BADB012D75868C903F0DE9A5 /* PCHTTPSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = D31B1F6F02DCB27EE922C32A /* PCHTTPSerializer.h */; };
+		C7A705348C0E57990A658129 /* PCHTTPResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2368AB5F3B4EBE84723751D7 /* PCHTTPResponse.h */; };
+		D72D581CE501FF08AD695D13 /* PCHTTPSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 098F3DFCD75171CCF37C4401 /* PCHTTPSerializer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		405D220BDD41BE1C94BA9F36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02E3364FFD0A80DC42246955 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F6FCBE3FC5E24AC1C068AF7;
+			remoteInfo = "Pods-PCHTTP";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		098F3DFCD75171CCF37C4401 /* PCHTTPSerializer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCHTTPSerializer.m; path = PCHTTP/PCHTTPSerializer.m; sourceTree = "<group>"; };
+		1BA7A5AAD5F53DF135D91EE5 /* Pods-PCHTTP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PCHTTP.xcconfig"; sourceTree = "<group>"; };
+		1CFFC61DFF4957FCB45ABBC0 /* Pods-PCHTTP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PCHTTP-dummy.m"; sourceTree = "<group>"; };
+		2368AB5F3B4EBE84723751D7 /* PCHTTPResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCHTTPResponse.h; path = PCHTTP/PCHTTPResponse.h; sourceTree = "<group>"; };
+		3B348C9F758D311D7EEC95C5 /* PCHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCHTTPClient.m; path = PCHTTP/PCHTTPClient.m; sourceTree = "<group>"; };
+		4211D473F9417282071EEB2E /* PCHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCHTTPClient.h; path = PCHTTP/PCHTTPClient.h; sourceTree = "<group>"; };
+		4404B1B0DDDB8C766E49254E /* Pods-PCHTTP-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PCHTTP-Private.xcconfig"; sourceTree = "<group>"; };
+		4C99EECB73BCF98D531A0EA8 /* PCHTTP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCHTTP.h; path = PCHTTP/PCHTTP.h; sourceTree = "<group>"; };
+		4FA359E1E49E4FB523011845 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		58507A91DDF5F3D0A00CBB8F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA8870CE0AD197BF291C8DD /* PCHTTPResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCHTTPResponse.m; path = PCHTTP/PCHTTPResponse.m; sourceTree = "<group>"; };
+		631D6F386915C92C81F616ED /* PCHTTPBatchClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PCHTTPBatchClient.m; path = PCHTTP/PCHTTPBatchClient.m; sourceTree = "<group>"; };
+		69BF321353F957ADE3E92284 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		73FAAC1C214EA688816DCEDE /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B1ED0556C443874F04FD14D0 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		BBC50C32E968FB5A7A4711AE /* PCHTTPBatchClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCHTTPBatchClient.h; path = PCHTTP/PCHTTPBatchClient.h; sourceTree = "<group>"; };
+		C3E234357CEFD24DE98DC5DA /* libPods-PCHTTP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PCHTTP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3FD5ECDFD110882998E79B9 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C717E1F402F188441EA6C3B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CED9D11E5F9A1A89DE40E1EB /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		D31B1F6F02DCB27EE922C32A /* PCHTTPSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCHTTPSerializer.h; path = PCHTTP/PCHTTPSerializer.h; sourceTree = "<group>"; };
+		D5330EA87CEA46B116D0872F /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		E54AB22A592214F74A1AEAC7 /* Pods-PCHTTP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PCHTTP-prefix.pch"; sourceTree = "<group>"; };
+		FAEEFCD7AAA9A93CDF406BB9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30951D4124F955E7E0C78DD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C32E82A1FA79A95D126B1F2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E485909839F5E92856DD9343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338964CA311AF15C7623A0DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EE3A365A42D66DE8103E589 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3FD5ECDFD110882998E79B9 /* Pods-acknowledgements.markdown */,
+				69BF321353F957ADE3E92284 /* Pods-acknowledgements.plist */,
+				CED9D11E5F9A1A89DE40E1EB /* Pods-dummy.m */,
+				D5330EA87CEA46B116D0872F /* Pods-environment.h */,
+				B1ED0556C443874F04FD14D0 /* Pods-resources.sh */,
+				4FA359E1E49E4FB523011845 /* Pods.debug.xcconfig */,
+				FAEEFCD7AAA9A93CDF406BB9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		23D336A5E2CDD811C9C947E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58507A91DDF5F3D0A00CBB8F /* libPods.a */,
+				C3E234357CEFD24DE98DC5DA /* libPods-PCHTTP.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B42997DC162D498DA4474BD /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C717E1F402F188441EA6C3B4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6847D3F2F18A51BDFCE6732F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EE3A365A42D66DE8103E589 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		847323DCF8AFD0A641F3C6EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D29A1E58AA7C48C72620EB0C /* PCHTTP */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		93165E002761CB3C115D1037 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BA7A5AAD5F53DF135D91EE5 /* Pods-PCHTTP.xcconfig */,
+				4404B1B0DDDB8C766E49254E /* Pods-PCHTTP-Private.xcconfig */,
+				1CFFC61DFF4957FCB45ABBC0 /* Pods-PCHTTP-dummy.m */,
+				E54AB22A592214F74A1AEAC7 /* Pods-PCHTTP-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-PCHTTP";
+			sourceTree = "<group>";
+		};
+		99C3A559E663A79F4CCC7133 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B42997DC162D498DA4474BD /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4C303BDE7DB79867FB6232A = {
+			isa = PBXGroup;
+			children = (
+				73FAAC1C214EA688816DCEDE /* Podfile */,
+				99C3A559E663A79F4CCC7133 /* Frameworks */,
+				847323DCF8AFD0A641F3C6EF /* Pods */,
+				23D336A5E2CDD811C9C947E0 /* Products */,
+				6847D3F2F18A51BDFCE6732F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D29A1E58AA7C48C72620EB0C /* PCHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				4C99EECB73BCF98D531A0EA8 /* PCHTTP.h */,
+				BBC50C32E968FB5A7A4711AE /* PCHTTPBatchClient.h */,
+				631D6F386915C92C81F616ED /* PCHTTPBatchClient.m */,
+				4211D473F9417282071EEB2E /* PCHTTPClient.h */,
+				3B348C9F758D311D7EEC95C5 /* PCHTTPClient.m */,
+				2368AB5F3B4EBE84723751D7 /* PCHTTPResponse.h */,
+				5DA8870CE0AD197BF291C8DD /* PCHTTPResponse.m */,
+				D31B1F6F02DCB27EE922C32A /* PCHTTPSerializer.h */,
+				098F3DFCD75171CCF37C4401 /* PCHTTPSerializer.m */,
+				93165E002761CB3C115D1037 /* Support Files */,
+			);
+			path = PCHTTP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E6E10CF4766E762117493386 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				202BB2DED663D7F6B210FE99 /* PCHTTP.h in Headers */,
+				B165591994C579A333C46624 /* PCHTTPBatchClient.h in Headers */,
+				02D3CCA385B1847DD98CAC32 /* PCHTTPClient.h in Headers */,
+				C7A705348C0E57990A658129 /* PCHTTPResponse.h in Headers */,
+				BADB012D75868C903F0DE9A5 /* PCHTTPSerializer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2A0C67B8C748B464C2D1280D /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE0601305A570003A1256B02 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				B2D842360268297EFB0858ED /* Sources */,
+				E485909839F5E92856DD9343 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA555F1B603449E714C07109 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 58507A91DDF5F3D0A00CBB8F /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3F6FCBE3FC5E24AC1C068AF7 /* Pods-PCHTTP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5423FF6E8FFE38DEF2131AFE /* Build configuration list for PBXNativeTarget "Pods-PCHTTP" */;
+			buildPhases = (
+				4F5349AF1214B654A4817010 /* Sources */,
+				30951D4124F955E7E0C78DD4 /* Frameworks */,
+				E6E10CF4766E762117493386 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PCHTTP";
+			productName = "Pods-PCHTTP";
+			productReference = C3E234357CEFD24DE98DC5DA /* libPods-PCHTTP.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02E3364FFD0A80DC42246955 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 26EDE21F6D030D58B09D6590 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B4C303BDE7DB79867FB6232A;
+			productRefGroup = 23D336A5E2CDD811C9C947E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A0C67B8C748B464C2D1280D /* Pods */,
+				3F6FCBE3FC5E24AC1C068AF7 /* Pods-PCHTTP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F5349AF1214B654A4817010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05BB42EA5A0563ACFC3A919F /* PCHTTPBatchClient.m in Sources */,
+				5466EBBF4C483EBDC43D2CE7 /* PCHTTPClient.m in Sources */,
+				43447D2056494BBB8B365356 /* PCHTTPResponse.m in Sources */,
+				D72D581CE501FF08AD695D13 /* PCHTTPSerializer.m in Sources */,
+				BA61F2E5C3109C4AB98C64E0 /* Pods-PCHTTP-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2D842360268297EFB0858ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49B0C06556A78C4F723DA74D /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA555F1B603449E714C07109 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PCHTTP";
+			target = 3F6FCBE3FC5E24AC1C068AF7 /* Pods-PCHTTP */;
+			targetProxy = 405D220BDD41BE1C94BA9F36 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02BAD746836949FAEA7A5AAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5C7A086989802A8230A0F912 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FA359E1E49E4FB523011845 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5F15B6F1B8EA171F9BC2855C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4404B1B0DDDB8C766E49254E /* Pods-PCHTTP-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PCHTTP/Pods-PCHTTP-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6BE53FFC0D9798A98C85B160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4404B1B0DDDB8C766E49254E /* Pods-PCHTTP-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PCHTTP/Pods-PCHTTP-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C72CF07EC8280C11119501B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAEEFCD7AAA9A93CDF406BB9 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F574A4C56D013DF4A9342974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26EDE21F6D030D58B09D6590 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BAD746836949FAEA7A5AAE /* Debug */,
+				F574A4C56D013DF4A9342974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5423FF6E8FFE38DEF2131AFE /* Build configuration list for PBXNativeTarget "Pods-PCHTTP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F15B6F1B8EA171F9BC2855C /* Debug */,
+				6BE53FFC0D9798A98C85B160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE0601305A570003A1256B02 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7A086989802A8230A0F912 /* Debug */,
+				C72CF07EC8280C11119501B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02E3364FFD0A80DC42246955 /* Project object */;
+}

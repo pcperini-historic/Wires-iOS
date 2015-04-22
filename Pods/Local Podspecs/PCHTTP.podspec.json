@@ -1,0 +1,24 @@
+{
+  "name": "PCHTTP",
+  "version": "1.0.2",
+  "summary": "PCHTTP - A Simple Cocoa HTTP Client",
+  "homepage": "https://github.com/pcperini/PCHTTP",
+  "license": {
+    "type": "CCA",
+    "file": "LICENSE.md"
+  },
+  "authors": {
+    "Patrick Perini": "pcperini@gmail.com",
+    "Jim Cervone": "jimcervone@gmail.com"
+  },
+  "platforms": {
+    "ios": "4.0",
+    "osx": "10.6"
+  },
+  "source": {
+    "git": "https://github.com/pcperini/PCHTTP.git",
+    "tag": "v1.0.2"
+  },
+  "source_files": "PCHTTP/*.{h,m}",
+  "requires_arc": true
+}
