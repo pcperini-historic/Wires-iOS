@@ -15,7 +15,6 @@
 		73D9862E1AE80FDB0053893C /* Wires WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 73D9862D1AE80FDB0053893C /* Wires WatchKit App.app */; };
 		73D986361AE80FDB0053893C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D986341AE80FDB0053893C /* Interface.storyboard */; };
 		73D986381AE80FDB0053893C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D986371AE80FDB0053893C /* Images.xcassets */; };
-		73D9863B1AE80FDB0053893C /* Wires WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 73D986201AE80FDB0053893C /* Wires WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		73DACB5A1AE5ED750059AFDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DACB591AE5ED750059AFDD /* AppDelegate.swift */; };
 		73DACB5C1AE5ED750059AFDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DACB5B1AE5ED750059AFDD /* ViewController.swift */; };
 		73DACB5F1AE5ED750059AFDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DACB5D1AE5ED750059AFDD /* Main.storyboard */; };
@@ -37,13 +36,6 @@
 			remoteGlobalIDString = 73D9862C1AE80FDB0053893C;
 			remoteInfo = "Wires WatchKit App";
 		};
-		73D986391AE80FDB0053893C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 73DACB4C1AE5ED750059AFDD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 73D9861F1AE80FDB0053893C;
-			remoteInfo = "Wires WatchKit Extension";
-		};
 		73DACB6A1AE5ED760059AFDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 73DACB4C1AE5ED750059AFDD /* Project object */;
@@ -52,20 +44,6 @@
 			remoteInfo = Wires;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		73D986421AE80FDC0053893C /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				73D9863B1AE80FDB0053893C /* Wires WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		08D07CFD95ADD804CE785C3F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -321,12 +299,10 @@
 				73DACB511AE5ED750059AFDD /* Frameworks */,
 				73DACB521AE5ED750059AFDD /* Resources */,
 				7086073E53E89934C119B421 /* Copy Pods Resources */,
-				73D986421AE80FDC0053893C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				73D9863A1AE80FDB0053893C /* PBXTargetDependency */,
 			);
 			name = Wires;
 			productName = Wires;
@@ -508,11 +484,6 @@
 			target = 73D9862C1AE80FDB0053893C /* Wires WatchKit App */;
 			targetProxy = 73D9862F1AE80FDB0053893C /* PBXContainerItemProxy */;
 		};
-		73D9863A1AE80FDB0053893C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 73D9861F1AE80FDB0053893C /* Wires WatchKit Extension */;
-			targetProxy = 73D986391AE80FDB0053893C /* PBXContainerItemProxy */;
-		};
 		73DACB6B1AE5ED760059AFDD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 73DACB531AE5ED750059AFDD /* Wires */;
@@ -691,6 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Wires/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "28d9f59a-aa79-45f9-8a00-3f53616aa73d";
@@ -704,6 +676,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Wires/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "28d9f59a-aa79-45f9-8a00-3f53616aa73d";
@@ -755,6 +728,7 @@
 				73D9863F1AE80FDC0053893C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73D986411AE80FDC0053893C /* Build configuration list for PBXNativeTarget "Wires WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -763,6 +737,7 @@
 				73D9863D1AE80FDC0053893C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73DACB4F1AE5ED750059AFDD /* Build configuration list for PBXProject "Wires" */ = {
 			isa = XCConfigurationList;
