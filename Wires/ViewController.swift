@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var circleLongPressRecognizers: [UILongPressGestureRecognizer]!
     private var recognizedCircleLongPresses: [UILongPressGestureRecognizer] = []
+    
+    private var lastHeadline: Headline?
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -37,9 +39,25 @@ class ViewController: UIViewController {
             ]
             
             self.dialogueView.loopsDialogue = true
+        } else if NSUserDefaults.standardUserDefaults().boolForKey("deviceTokenRequested") {
+            if self.lastHeadline != nil {
+                self.dialogueView.lines = [
+                    "Good \(NSDate().temporalGreeting()).",
+                    self.lastHeadline!.text
+                ]
+                
+                self.dialogueView.loopsDialogue = true
+            } else {
+                self.dialogueView.lines = [
+                    "Good \(NSDate().temporalGreeting()).",
+                    "Wires is fetching the\nmost recent headline."
+                ]
+                
+                self.updateLastHeadline()
+            }
         } else {
             self.dialogueView.lines = [
-                "Good \(NSDate().temporalGreeting()).",
+                "Good \(NSDate().temporalGreeting()).\nTap here to begin.",
                 "Wires is a delivery platform\nfor breaking news headlines.",
                 "All headlines are curated\nfrom verified Twitter accounts.",
                 "To receive headlines, allow\nWires to send push notifications",
@@ -47,6 +65,13 @@ class ViewController: UIViewController {
                 "Wires will also push headlines\nto your Apple Watch.",
                 "Please allow Wires\nto send you notifications."
             ]
+        }
+    }
+    
+    func updateLastHeadline() {
+        Headline.lastHeadline { (lastHeadline: Headline?) in
+            self.lastHeadline = lastHeadline
+            self.setDialogueLines()
         }
     }
     
@@ -68,8 +93,14 @@ extension ViewController: DialogueViewDelegate {
     }
     
     func dialogueView(dialogueView: DialogueView, didFinishLines lines: [String]) {
-        if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-            appDelegate.registerForRemoteNotifications()
+        if !NSUserDefaults.standardUserDefaults().boolForKey("deviceTokenRequested") {
+            if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+                appDelegate.registerForRemoteNotifications()
+            }
+        } else if let sourceURL = self.lastHeadline?.sourceURL {
+            UIApplication.sharedApplication().openURL(NSURL(string: sourceURL)!)
+        } else {
+            self.updateLastHeadline()
         }
     }
 }

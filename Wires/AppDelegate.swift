@@ -39,7 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().registerUserNotificationSettings(userNotificationSettings)
         
         // Notifications
-        UIApplication.sharedApplication().registerForRemoteNotifications()        
+        UIApplication.sharedApplication().registerForRemoteNotifications()
+        
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "deviceTokenRequested")
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
@@ -58,7 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         if registerToken {
-            WiresAPI.registerDeviceToken(deviceToken)
+            let device = Device(token: deviceToken)
+            device.register()
             
             NSUserDefaults.standardUserDefaults().setObject(deviceToken, forKey: "deviceToken")
             NSUserDefaults.standardUserDefaults().synchronize()
@@ -95,6 +99,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dispatch_async(dispatch_get_main_queue()) {
             if let sourceURL = userInfo["sourceURL"] as? String {
                 UIApplication.sharedApplication().openURL(NSURL(string: sourceURL)!)
+            }
+        }
+    }
+    
+    // MARK: Watch Handlers
+    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        if let identifier = userInfo?["identifier"] as? String {
+            switch identifier {
+            case "openURL:":
+                let headline = Headline(dictionary: userInfo)
+                headline.readableText { (readableText: String?) in
+                    reply(["text": readableText ?? NSNull()])
+                    return
+                }
+                
+            case "lastURL":
+                Headline.lastHeadline { (lastHeadline: Headline?) in
+                    lastHeadline?.readableText { (readableText: String?) in
+                        reply(["text": readableText ?? NSNull()])
+                        return
+                    }
+                }
+                
+            default:
+                break
             }
         }
     }

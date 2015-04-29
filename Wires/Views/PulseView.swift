@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable public class PulseView: UIView {
+@objc @IBDesignable public class PulseView: UIView {
     // MARK: Class Properties
     private class var waypoints: [CGPoint] {
         return [
@@ -91,15 +91,30 @@ import UIKit
             y: waypoint.y * self.bounds.height)
     }
     
-    private func bezierPath() -> UIBezierPath {
+    private func bezierPath(frameIndex: Int = PulseView.waypoints.count) -> UIBezierPath {
         var path: UIBezierPath = UIBezierPath()
         path.moveToPoint(self.localPoint(PulseView.waypoints[0]))
         
-        for var waypointIndex = 1; waypointIndex < PulseView.waypoints.count; waypointIndex++ {
+        for var waypointIndex = 1; waypointIndex < frameIndex; waypointIndex++ {
             path.addLineToPoint(self.localPoint(PulseView.waypoints[waypointIndex]))
         }
         
         return path
+    }
+    
+    func imageAtFrame(frameIndex: Int) -> UIImage {
+        UIGraphicsBeginImageContext(self.bounds.size)
+        
+        let path = self.bezierPath(frameIndex: frameIndex)
+        path.lineWidth = self.lineWidth
+        
+        self.tintColor.setStroke()
+        path.stroke()
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        return image
     }
 
     // MARK: Animators

@@ -14,7 +14,6 @@
 		73D9862A1AE80FDB0053893C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D986291AE80FDB0053893C /* Images.xcassets */; };
 		73D9862E1AE80FDB0053893C /* Wires WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 73D9862D1AE80FDB0053893C /* Wires WatchKit App.app */; };
 		73D986361AE80FDB0053893C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D986341AE80FDB0053893C /* Interface.storyboard */; };
-		73D986381AE80FDB0053893C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D986371AE80FDB0053893C /* Images.xcassets */; };
 		73DACB5A1AE5ED750059AFDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DACB591AE5ED750059AFDD /* AppDelegate.swift */; };
 		73DACB5C1AE5ED750059AFDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DACB5B1AE5ED750059AFDD /* ViewController.swift */; };
 		73DACB5F1AE5ED750059AFDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73DACB5D1AE5ED750059AFDD /* Main.storyboard */; };
@@ -25,6 +24,10 @@
 		73DACB7D1AE60AD20059AFDD /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DACB7C1AE60AD20059AFDD /* ShapeView.swift */; };
 		73DACB7F1AE60FE00059AFDD /* DialogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DACB7E1AE60FE00059AFDD /* DialogueView.swift */; };
 		73DACB811AE6134F0059AFDD /* ContextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DACB801AE6134F0059AFDD /* ContextExtensions.swift */; };
+		73EDF0DA1AF07293003D4537 /* Wires WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 73D986201AE80FDB0053893C /* Wires WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		73EDF0DF1AF08AF6003D4537 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73EDF0DE1AF08AF6003D4537 /* Images.xcassets */; };
+		73F53EB91AF05FE5003D4686 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F53EB81AF05FE5003D4686 /* Device.swift */; };
+		73F53EBC1AF0606D003D4686 /* Headline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F53EBB1AF0606D003D4686 /* Headline.swift */; };
 		B521E573F39342064935BE18 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D07CFD95ADD804CE785C3F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -43,11 +46,32 @@
 			remoteGlobalIDString = 73DACB531AE5ED750059AFDD;
 			remoteInfo = Wires;
 		};
+		73EDF0DB1AF07293003D4537 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73DACB4C1AE5ED750059AFDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73D9861F1AE80FDB0053893C;
+			remoteInfo = "Wires WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		73EDF0DD1AF07293003D4537 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				73EDF0DA1AF07293003D4537 /* Wires WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		08D07CFD95ADD804CE785C3F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		73D986161AE71A400053893C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		73D986161AE71A400053893C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		73D986181AE71BA50053893C /* WiresAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WiresAPI.swift; path = APIs/WiresAPI.swift; sourceTree = "<group>"; };
 		73D9861A1AE71BE40053893C /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		73D986201AE80FDB0053893C /* Wires WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Wires WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,8 +83,6 @@
 		73D9862D1AE80FDB0053893C /* Wires WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wires WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D986331AE80FDB0053893C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73D986351AE80FDB0053893C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		73D986371AE80FDB0053893C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		73D986431AE8103D0053893C /* NotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = NotificationPayload.apns; sourceTree = "<group>"; };
 		73DACB541AE5ED750059AFDD /* Wires.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wires.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DACB581AE5ED750059AFDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73DACB591AE5ED750059AFDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +97,9 @@
 		73DACB7C1AE60AD20059AFDD /* ShapeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShapeView.swift; path = Views/ShapeView.swift; sourceTree = "<group>"; };
 		73DACB7E1AE60FE00059AFDD /* DialogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DialogueView.swift; path = Views/DialogueView.swift; sourceTree = "<group>"; };
 		73DACB801AE6134F0059AFDD /* ContextExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContextExtensions.swift; path = Categories/ContextExtensions.swift; sourceTree = "<group>"; };
+		73EDF0DE1AF08AF6003D4537 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		73F53EB81AF05FE5003D4686 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Models/Device.swift; sourceTree = "<group>"; };
+		73F53EBB1AF0606D003D4686 /* Headline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Headline.swift; path = Models/Headline.swift; sourceTree = "<group>"; };
 		AEC8124DE18F33CE47551720 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B7A1651608139F42771ACEA3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				73D986341AE80FDB0053893C /* Interface.storyboard */,
-				73D986371AE80FDB0053893C /* Images.xcassets */,
+				73EDF0DE1AF08AF6003D4537 /* Images.xcassets */,
 				73D986321AE80FDB0053893C /* Supporting Files */,
 			);
 			path = "Wires WatchKit App";
@@ -193,6 +218,7 @@
 				73DACB601AE5ED750059AFDD /* Images.xcassets */,
 				73DACB621AE5ED750059AFDD /* LaunchScreen.xib */,
 				73DACB571AE5ED750059AFDD /* Supporting Files */,
+				73F53EBA1AF05FE8003D4686 /* Models */,
 				73DACB821AE6135D0059AFDD /* Categories */,
 				73DACB7B1AE5F07A0059AFDD /* Views */,
 				73D9861B1AE71C100053893C /* APIs */,
@@ -205,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				73DACB581AE5ED750059AFDD /* Info.plist */,
-				73D986431AE8103D0053893C /* NotificationPayload.apns */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -243,6 +268,15 @@
 				73DACB801AE6134F0059AFDD /* ContextExtensions.swift */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		73F53EBA1AF05FE8003D4686 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				73F53EB81AF05FE5003D4686 /* Device.swift */,
+				73F53EBB1AF0606D003D4686 /* Headline.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		E6F5FA1798397A170B0E0FFA /* Pods */ = {
@@ -299,10 +333,12 @@
 				73DACB511AE5ED750059AFDD /* Frameworks */,
 				73DACB521AE5ED750059AFDD /* Resources */,
 				7086073E53E89934C119B421 /* Copy Pods Resources */,
+				73EDF0DD1AF07293003D4537 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				73EDF0DC1AF07293003D4537 /* PBXTargetDependency */,
 			);
 			name = Wires;
 			productName = Wires;
@@ -341,6 +377,7 @@
 					};
 					73D9862C1AE80FDB0053893C = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = D9G4X7TP5Q;
 					};
 					73DACB531AE5ED750059AFDD = {
 						CreatedOnToolsVersion = 6.3;
@@ -387,7 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73D986361AE80FDB0053893C /* Interface.storyboard in Resources */,
-				73D986381AE80FDB0053893C /* Images.xcassets in Resources */,
+				73EDF0DF1AF08AF6003D4537 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,8 +500,10 @@
 				73D986191AE71BA50053893C /* WiresAPI.swift in Sources */,
 				73DACB7D1AE60AD20059AFDD /* ShapeView.swift in Sources */,
 				73DACB7F1AE60FE00059AFDD /* DialogueView.swift in Sources */,
+				73F53EBC1AF0606D003D4686 /* Headline.swift in Sources */,
 				73DACB811AE6134F0059AFDD /* ContextExtensions.swift in Sources */,
 				73DACB7A1AE5EDE10059AFDD /* PulseView.swift in Sources */,
+				73F53EB91AF05FE5003D4686 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +527,11 @@
 			isa = PBXTargetDependency;
 			target = 73DACB531AE5ED750059AFDD /* Wires */;
 			targetProxy = 73DACB6A1AE5ED760059AFDD /* PBXContainerItemProxy */;
+		};
+		73EDF0DC1AF07293003D4537 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73D9861F1AE80FDB0053893C /* Wires WatchKit Extension */;
+			targetProxy = 73EDF0DB1AF07293003D4537 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -547,6 +591,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -555,6 +601,7 @@
 				INFOPLIST_FILE = "Wires WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -565,10 +612,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IBSC_MODULE = Wires_WatchKit_Extension;
 				INFOPLIST_FILE = "Wires WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";

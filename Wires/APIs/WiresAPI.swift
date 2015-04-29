@@ -8,14 +8,10 @@
 
 import Foundation
 
-class WiresAPI {
+struct WiresAPI {
     // MARK: Class Properties
-    private class var domain: String {
-        return "https://serene-plateau-5954.herokuapp.com"
-    }
+    static var domain: String = "https://serene-plateau-5954.herokuapp.com"
     
-    // MARK: Device Handlers
-    class func registerDeviceToken(token: String) {
-        PCHTTPClient.post(domain, payload: ["token": token], responseHandler: nil)
-    }
+    static var readabilityDomain: String = "https://readability.com/api/content/v1"
+    static var readabilityToken: String = "dc441c6133f55a99504f325823d1aa6f0a902981"
 }
