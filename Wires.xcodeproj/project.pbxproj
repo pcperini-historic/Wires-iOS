@@ -100,6 +100,7 @@
 		73DACB801AE6134F0059AFDD /* ContextExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContextExtensions.swift; path = Categories/ContextExtensions.swift; sourceTree = "<group>"; };
 		73EDF0DE1AF08AF6003D4537 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		73EDF0E41AF2A455003D4537 /* Wires.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Wires.entitlements; sourceTree = "<group>"; };
+		73EDF0E61AF2AB58003D4537 /* Wires WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Wires WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		73F53EB81AF05FE5003D4686 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Models/Device.swift; sourceTree = "<group>"; };
 		73F53EBB1AF0606D003D4686 /* Headline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Headline.swift; path = Models/Headline.swift; sourceTree = "<group>"; };
 		AEC8124DE18F33CE47551720 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 		73D986211AE80FDB0053893C /* Wires WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				73EDF0E61AF2AB58003D4537 /* Wires WatchKit Extension.entitlements */,
 				73D986251AE80FDB0053893C /* InterfaceController.swift */,
 				73D986271AE80FDB0053893C /* NotificationController.swift */,
 				73D986291AE80FDB0053893C /* Images.xcassets */,
@@ -377,6 +379,12 @@
 				TargetAttributes = {
 					73D9861F1AE80FDB0053893C = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = D9G4X7TP5Q;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					73D9862C1AE80FDB0053893C = {
 						CreatedOnToolsVersion = 6.3;
@@ -576,6 +584,9 @@
 		73D9863C1AE80FDC0053893C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Wires WatchKit Extension/Wires WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -583,6 +594,7 @@
 				INFOPLIST_FILE = "Wires WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -590,9 +602,13 @@
 		73D9863D1AE80FDC0053893C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Wires WatchKit Extension/Wires WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Wires WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

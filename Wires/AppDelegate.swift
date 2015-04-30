@@ -43,6 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NSUserDefaults.standardUserDefaults().setBool(true, forKey: "deviceTokenRequested")
         NSUserDefaults.standardUserDefaults().synchronize()
+        
+        NSUserDefaults(suiteName: "group.Wires")?.setBool(true, forKey: "deviceTokenRequested")
+        NSUserDefaults(suiteName: "group.Wires")?.synchronize()
     }
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
@@ -116,6 +119,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
             case "lastURL":
                 Headline.lastHeadline { (lastHeadline: Headline?) in
+                    println(lastHeadline?.text)
                     lastHeadline?.readableText { (readableText: String?) in
                         reply(["text": readableText ?? NSNull()])
                         return
@@ -133,6 +137,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Update Watch info
         let sharedDefaults = NSUserDefaults(suiteName: "group.Wires")
         
+        println("app: \(UIApplication.sharedApplication().isRegisteredForRemoteNotifications())")
         sharedDefaults?.setBool(UIApplication.sharedApplication().isRegisteredForRemoteNotifications(),
             forKey: "applicationIsRegisteredForRemoteNotifications")
         sharedDefaults?.setBool(NSUserDefaults.standardUserDefaults().boolForKey("deviceTokenRequested"),
