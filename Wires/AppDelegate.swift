@@ -130,6 +130,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: State Handlers
     func applicationDidBecomeActive(application: UIApplication) {
+        // Update Watch info
+        let sharedDefaults = NSUserDefaults(suiteName: "group.Wires")
+        
+        sharedDefaults?.setBool(UIApplication.sharedApplication().isRegisteredForRemoteNotifications(),
+            forKey: "applicationIsRegisteredForRemoteNotifications")
+        sharedDefaults?.setBool(NSUserDefaults.standardUserDefaults().boolForKey("deviceTokenRequested"),
+            forKey: "deviceTokenRequested")
+        
+        sharedDefaults?.synchronize()
+        
+        // Load view
         self.window?.rootViewController?.viewDidAppear(false)
     }
 }

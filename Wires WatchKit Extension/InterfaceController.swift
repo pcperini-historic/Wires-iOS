@@ -27,8 +27,15 @@ class InterfaceController: WKInterfaceController {
     
     // MARK: State Handlers
     override func awakeWithContext(context: AnyObject?) {
-        self.label?.setText("Loading...")
-        self.updateText(["identifier": "lastURL"])
+        let sharedDefaults = NSUserDefaults(suiteName: "group.Wires") ?? NSUserDefaults.standardUserDefaults()
+        if sharedDefaults.boolForKey("applicationIsRegisteredForRemoteNotifications") {
+            self.label?.setText("Good \(NSDate().temporalGreeting()).\nWires is listening for breaking news headlines.")
+        } else if sharedDefaults.boolForKey("deviceTokenRequested") {
+            self.label?.setText("Good \(NSDate().temporalGreeting()).\nWires is fetching the\nmost recent headline.")
+            self.updateText(["identifier": "lastURL"])
+        } else {
+            self.label?.setText("Good \(NSDate().temporalGreeting()).\nPlease launch Wires on your iPhone to begin.")
+        }
     }
     
     // MARK: Notification Handlers

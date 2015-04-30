@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Wires_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="1" alignment="left" text="Loading..." numberOfLines="0" id="s7A-PW-qdR">
+                        <label width="1" alignment="left" text="Good" numberOfLines="0" id="s7A-PW-qdR">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </label>
                         <imageView width="1" alignment="left" verticalAlignment="bottom" image="Footer" contentMode="scaleAspectFit" animationDuration="1" id="VlT-aJ-UOr"/>
