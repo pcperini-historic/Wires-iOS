@@ -22,6 +22,7 @@
                                             <imageView height="50" alignment="left" verticalAlignment="bottom" image="Footer" contentMode="scaleAspectFit" animationDuration="3" id="VlT-aJ-UOr"/>
                                             <imageView width="10" height="50" alignment="left" image="Ball" contentMode="scaleAspectFit" id="uYx-ft-J39"/>
                                         </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </group>
                                 </tableRow>
                             </items>

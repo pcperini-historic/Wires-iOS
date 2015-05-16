@@ -34,7 +34,10 @@ class ViewController: UIViewController {
     func setDialogueLines() {
         if UIApplication.sharedApplication().isRegisteredForRemoteNotifications() {
             if BETA {
-                let deviceToken = NSUserDefaults.standardUserDefaults().stringForKey("deviceToken")!
+                if NSUserDefaults.standardUserDefaults().stringForKey("deviceToken") == nil {
+                    (UIApplication.sharedApplication().delegate as? AppDelegate)?.registerForRemoteNotifications()
+                }
+                
                 self.dialogueView.lines = [
                     "Good \(NSDate().temporalGreeting()).",
                     "Wires is listening for\nbreaking news headlines.",
