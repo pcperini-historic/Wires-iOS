@@ -1,0 +1,20 @@
+{
+  "name": "Recorder",
+  "version": "0.0.3",
+  "summary": "Record and export a view hierarchy to PNG or JPEG frames for flip book style animations (as used in WatchKit).",
+  "description": "                   Record and export a view hierarchy to PNG or JPEG frames for flip book style animations (as used in WatchKit).\n\t\t   Example usage: output a UIView animation to PNG or JPG and then play it on the Apple Watch. \n",
+  "homepage": "https://github.com/andydrizen/UIViewRecorder",
+  "license": "MIT",
+  "authors": {
+    "Andy Drizen": "andydrizen@gmail.com"
+  },
+  "social_media_url": "http://twitter.com/andydrizen",
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "https://github.com/andydrizen/UIViewRecorder.git",
+    "tag": "0.0.3"
+  },
+  "source_files": "Recorder.swift"
+}

@@ -1,19 +1,10 @@
 {
     "aps": {
         "alert": {
-            "body": "Breaking: Google launches it own mobile network for Nexus 6 owners.",
-            "title": "The Verge:"
+            "body": "The Associated Press — BREAKING: Verizon says it will buy AOL in deal worth $4.4B to strengthen mobile, ad offerings."
         },
         "category": "com.pcperini.Wires.headline"
     },
     
-    "WatchKit Simulator Actions": [
-                                   {
-                                   "title": "Source",
-                                   "identifier": "openURL:"
-                                   }
-                                   ],
-    
-    "text": "Breaking: Google launches it own mobile network for Nexus 6 owners.",
-    "sourceURL": "http://bbc.in/1PUr8JT"
+    "WatchKit Simulator Actions": []
 }

@@ -13,11 +13,14 @@ import Foundation
 class InterfaceController: WKInterfaceController {
     // MARK: Properties
     @IBOutlet var label: WKInterfaceLabel?
+    @IBOutlet var footerTable: WKInterfaceTable?
     
     // MARK: Mutators
     func updateText(userInfo: [NSObject: AnyObject]) {
+        println(userInfo)
         WKInterfaceController.openParentApplication(userInfo) { (userInfo: [NSObject : AnyObject]!, error: NSError!) in
-            var text = userInfo["text"] as? String ?? "Sorry, the headline's source could not be opened."
+            println(userInfo)
+            var text = userInfo?["text"] as? String ?? "Sorry, the headline's source could not be opened."
             
             // Format, then set
             text = text.stringByReplacingOccurrencesOfString("\n", withString: "\n\n", options: nil, range: nil)
@@ -41,14 +44,21 @@ class InterfaceController: WKInterfaceController {
         }
         
         self.label?.setText(text)
+        self.footerTable?.setNumberOfRows(1, withRowType: "Footer")
     }
     
     // MARK: Notification Handlers
     override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
         switch identifier! {
         case "openURL:":
-            var userInfo = remoteNotification
-            userInfo["identifier"] = "openURL:"
+            self.label?.setText("Good \(NSDate().temporalGreeting()).\nWires is loading your headline...")
+            
+            var userInfo = [
+                "identifier": "openURL:",
+                
+            ]
+            
+            userInfo["identifier"] = identifier!
             self.updateText(userInfo)
             
         default:

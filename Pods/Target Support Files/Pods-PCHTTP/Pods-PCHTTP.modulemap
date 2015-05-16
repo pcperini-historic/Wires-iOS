@@ -1,0 +1,6 @@
+framework module PCHTTP {
+  umbrella header "Pods-PCHTTP-umbrella.h"
+
+  export *
+  module * { export * }
+}

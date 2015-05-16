@@ -33,17 +33,27 @@ class ViewController: UIViewController {
     // MARK: Mutators
     func setDialogueLines() {
         if UIApplication.sharedApplication().isRegisteredForRemoteNotifications() {
-            self.dialogueView.lines = [
-                "Good \(NSDate().temporalGreeting()).",
-                "Wires is listening for\nbreaking news headlines."
-            ]
+            if BETA {
+                let deviceToken = NSUserDefaults.standardUserDefaults().stringForKey("deviceToken")!
+                self.dialogueView.lines = [
+                    "Good \(NSDate().temporalGreeting()).",
+                    "Wires is listening for\nbreaking news headlines.",
+                    "You will receive push\nnotifications for headlines.",
+                    "Wires is in beta.\nTap to copy your device token."
+                ]
+            } else {
+                self.dialogueView.lines = [
+                    "Good \(NSDate().temporalGreeting()).",
+                    "Wires is listening for\nbreaking news headlines."
+                ]
+            }
             
             self.dialogueView.loopsDialogue = true
         } else if NSUserDefaults.standardUserDefaults().boolForKey("deviceTokenRequested") {
-            if self.lastHeadline != nil {
+            if let lastHeadline = self.lastHeadline {
                 self.dialogueView.lines = [
                     "Good \(NSDate().temporalGreeting()).",
-                    self.lastHeadline!.text
+                    lastHeadline.text
                 ]
                 
                 self.dialogueView.loopsDialogue = true
@@ -60,7 +70,8 @@ class ViewController: UIViewController {
                 "Good \(NSDate().temporalGreeting()).\nTap here to begin.",
                 "Wires is a delivery platform\nfor breaking news headlines.",
                 "All headlines are curated\nfrom verified Twitter accounts.",
-                "To receive headlines, allow\nWires to send push notifications",
+                "There is no configuration\nnecessary for Wires.",
+                "To receive headlines, simply\nallow Wires to send push notifications",
                 "and Wires will begin\npushing headlines.",
                 "Wires will also push headlines\nto your Apple Watch.",
                 "Please allow Wires\nto send you notifications."
@@ -93,11 +104,22 @@ extension ViewController: DialogueViewDelegate {
     }
     
     func dialogueView(dialogueView: DialogueView, didFinishLines lines: [String]) {
-        if !NSUserDefaults.standardUserDefaults().boolForKey("deviceTokenRequested") {
-            if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-                appDelegate.registerForRemoteNotifications()
+        if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+            appDelegate.registerForRemoteNotifications()
+        }
+        
+        if let deviceToken = NSUserDefaults.standardUserDefaults().stringForKey("deviceToken") {
+            if BETA {
+                UIPasteboard.generalPasteboard().string = deviceToken
+                
+                let alertView = UIAlertView(title: "Token Copied",
+                    message: "Your device token has been copied.",
+                    delegate: nil,
+                    cancelButtonTitle: "OK")
+                alertView.show()
             }
-        } else if let sourceURL = self.lastHeadline?.sourceURL {
+        }
+        else if let sourceURL = self.lastHeadline?.sourceURL {
             UIApplication.sharedApplication().openURL(NSURL(string: sourceURL)!)
         } else {
             self.updateLastHeadline()

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import PCHTTP
 
 struct Headline {
     // MARK: Properties
@@ -23,7 +24,7 @@ struct Headline {
     // MARK: Accessors
     func readableText(callback: (readableText: String?) -> Void) {
         if self.sourceURL == nil {
-            callback(readableText: nil)
+            callback(readableText: self.text)
             return
         }
         

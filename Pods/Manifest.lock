@@ -1,19 +1,27 @@
 PODS:
   - PCHTTP (1.0.2)
+  - Recorder (0.0.3)
 
 DEPENDENCIES:
   - PCHTTP (from `https://github.com/pcperini/PCHTTP.git`)
+  - Recorder (from `https://github.com/andydrizen/UIViewRecorder.git`)
 
 EXTERNAL SOURCES:
   PCHTTP:
     :git: https://github.com/pcperini/PCHTTP.git
+  Recorder:
+    :git: https://github.com/andydrizen/UIViewRecorder.git
 
 CHECKOUT OPTIONS:
   PCHTTP:
     :commit: 5ee46f1d0014852066a069845e2416aa7fa59919
     :git: https://github.com/pcperini/PCHTTP.git
+  Recorder:
+    :commit: 29446f2e9200b69936e35aa582794dd6b82ca752
+    :git: https://github.com/andydrizen/UIViewRecorder.git
 
 SPEC CHECKSUMS:
   PCHTTP: 931c472a8b50d2cb89ed5f8df1271181cde42d55
+  Recorder: cf5da60808b91471f702e5fb57b16df9a3258738
 
 COCOAPODS: 0.36.0.rc.1

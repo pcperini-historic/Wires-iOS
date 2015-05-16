@@ -8,6 +8,9 @@
 
 import UIKit
 
+// MARK: Macros
+let BETA: Bool = true
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Types
@@ -18,6 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: Properties
     var window: UIWindow?
+    
+    // MARK: Lifecycle
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+        if NSUserDefaults.standardUserDefaults().boolForKey("deviceTokenRequested") {
+            self.registerForRemoteNotifications()
+        }
+        
+        return true
+    }
     
     // MARK: Device Token Handlers
     func registerForRemoteNotifications() {
@@ -111,7 +123,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let identifier = userInfo?["identifier"] as? String {
             switch identifier {
             case "openURL:":
-                let headline = Headline(dictionary: userInfo)
+                let headline = Headline(dictionary: NSDictionary(dictionary: userInfo ?? [:]))
                 headline.readableText { (readableText: String?) in
                     reply(["text": readableText ?? NSNull()])
                     return
@@ -119,7 +131,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
             case "lastURL":
                 Headline.lastHeadline { (lastHeadline: Headline?) in
-                    println(lastHeadline?.text)
                     lastHeadline?.readableText { (readableText: String?) in
                         reply(["text": readableText ?? NSNull()])
                         return
@@ -127,8 +138,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 
             default:
-                break
+                reply(["text": NSNull()])
+                return
             }
+        } else {
+            reply(nil)
         }
     }
     
@@ -137,7 +151,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Update Watch info
         let sharedDefaults = NSUserDefaults(suiteName: "group.Wires")
         
-        println("app: \(UIApplication.sharedApplication().isRegisteredForRemoteNotifications())")
         sharedDefaults?.setBool(UIApplication.sharedApplication().isRegisteredForRemoteNotifications(),
             forKey: "applicationIsRegisteredForRemoteNotifications")
         sharedDefaults?.setBool(NSUserDefaults.standardUserDefaults().boolForKey("deviceTokenRequested"),

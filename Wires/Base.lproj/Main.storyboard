@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vx4-dE-yg6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -43,10 +43,27 @@
                                     <outletCollection property="gestureRecognizers" destination="bEM-ts-FkA" appends="YES" id="fYz-dt-icJ"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Afternoon" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lci-oy-ddh" customClass="DialogueView" customModule="Wires" customModuleProvider="target">
+                                <rect key="frame" x="150" y="556" width="300" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="TAD-EK-y9m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="loopsDialogue" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animates" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ZH-FQ-nml" customClass="PulseView" customModule="Wires" customModuleProvider="target">
-                                <rect key="frame" x="175" y="175" width="250" height="250"/>
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="dch-cO-Ol8"/>
+                                    <constraint firstAttribute="height" constant="300" id="nyl-nK-Ttk"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                         <real key="value" value="5"/>
@@ -54,24 +71,11 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Afternoon" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lci-oy-ddh" customClass="DialogueView" customModule="Wires" customModuleProvider="target">
-                                <rect key="frame" x="150" y="490" width="300" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="TAD-EK-y9m"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="loopsDialogue" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animates" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.31372549019607843" green="0.8901960784313725" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="yqC-37-1Bv" secondAttribute="centerY" id="Bjq-ko-ue2"/>
-                            <constraint firstAttribute="centerX" secondItem="6ZH-FQ-nml" secondAttribute="centerX" constant="-0.5" id="Mus-aW-PX1"/>
+                            <constraint firstAttribute="centerX" secondItem="6ZH-FQ-nml" secondAttribute="centerX" id="Mus-aW-PX1"/>
                             <constraint firstAttribute="centerY" secondItem="ECF-1K-46o" secondAttribute="centerY" id="SO3-fC-ZSD"/>
                             <constraint firstItem="yqC-37-1Bv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-65" id="U9P-6x-okk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ECF-1K-46o" secondAttribute="trailing" constant="-65" id="Ud7-Tr-GbE"/>
@@ -102,6 +106,61 @@
                 </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="226" y="341"/>
+        </scene>
+        <!--Recording View Controller-->
+        <scene sceneID="PU3-DZ-NQ0">
+            <objects>
+                <viewController id="vx4-dE-yg6" customClass="RecordingViewController" customModule="Wires" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q7S-Ml-lIb"/>
+                        <viewControllerLayoutGuide type="bottom" id="uoE-Lw-9x1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fae-oI-yuw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUO-d1-mIu">
+                                <rect key="frame" x="144" y="105" width="312" height="390"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CN-wp-akb" customClass="PulseView" customModule="Wires">
+                                        <rect key="frame" x="0.0" y="285" width="312" height="200"/>
+                                        <color key="tintColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="5i3-kh-8Ei"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="390" id="DLx-zC-1j6"/>
+                                    <constraint firstAttribute="bottom" secondItem="1CN-wp-akb" secondAttribute="bottom" constant="-95" id="eVZ-uw-Rfl"/>
+                                    <constraint firstAttribute="width" constant="312" id="iDH-XD-x5v"/>
+                                    <constraint firstItem="1CN-wp-akb" firstAttribute="width" secondItem="lUO-d1-mIu" secondAttribute="width" id="p66-l3-LoH"/>
+                                    <constraint firstAttribute="centerX" secondItem="1CN-wp-akb" secondAttribute="centerX" id="uFe-fz-WfL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="lUO-d1-mIu" secondAttribute="centerY" id="TV0-uU-Vft"/>
+                            <constraint firstAttribute="centerX" secondItem="lUO-d1-mIu" secondAttribute="centerX" id="enT-OZ-wD0"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="recordingView" destination="1CN-wp-akb" id="ZLm-Pr-Llq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WpH-h4-HfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="1005"/>
         </scene>
     </scenes>
 </document>

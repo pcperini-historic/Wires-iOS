@@ -8,25 +8,31 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
+		</dict>
+		<key>Pods-Recorder.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>510888C575AE68E09EC001E7</key>
+		<key>584C63176AFCD76929FBC6E4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABF13B85DBDF9AC794EC2B3A</key>
+		<key>6B760CDE0A25E88C3190ABBE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A0C740F397382D060642E2C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

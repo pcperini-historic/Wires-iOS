@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PCHTTP
 
 struct Device {
     // MARK: Properties

@@ -76,7 +76,7 @@ import UIKit
         
         super.init(coder: aDecoder)
         
-        self.bezierPathLayer.bounds = self.layer.bounds
+        self.bezierPathLayer.frame = self.layer.bounds
         self.layer.addSublayer(self.bezierPathLayer)
         
         self.bezierPathLayer.path = self.bezierPath().CGPath
@@ -100,21 +100,6 @@ import UIKit
         }
         
         return path
-    }
-    
-    func imageAtFrame(frameIndex: Int) -> UIImage {
-        UIGraphicsBeginImageContext(self.bounds.size)
-        
-        let path = self.bezierPath(frameIndex: frameIndex)
-        path.lineWidth = self.lineWidth
-        
-        self.tintColor.setStroke()
-        path.stroke()
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        
-        UIGraphicsEndImageContext()
-        
-        return image
     }
 
     // MARK: Animators
