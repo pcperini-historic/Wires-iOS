@@ -5,22 +5,22 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Wires-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Wires_WatchKit_App" customModuleProvider="target">
+                <controller title="Wires" contentMode="scaleAspectFit" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Wires_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label width="1" alignment="left" text="Good" numberOfLines="0" id="s7A-PW-qdR">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </label>
                         <table alignment="center" verticalAlignment="bottom" id="1dx-b6-Kev">
                             <items>
-                                <tableRow identifier="Footer" id="kWO-JB-87u">
+                                <tableRow identifier="Footer" selectable="NO" id="kWO-JB-87u">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="9mJ-Jd-ZAJ">
                                         <items>
-                                            <imageView width="10" height="50" alignment="left" image="Ball" contentMode="scaleAspectFit" id="U7G-Xs-DXR"/>
-                                            <imageView height="50" alignment="left" verticalAlignment="bottom" image="Footer" contentMode="scaleAspectFit" animationDuration="3" id="VlT-aJ-UOr"/>
-                                            <imageView width="10" height="50" alignment="left" image="Ball" contentMode="scaleAspectFit" id="uYx-ft-J39"/>
+                                            <imageView width="10" height="75" alignment="left" image="Ball" contentMode="scaleAspectFit" id="U7G-Xs-DXR"/>
+                                            <imageView height="75" alignment="left" verticalAlignment="bottom" image="Footer" contentMode="scaleAspectFit" animationDuration="3" id="VlT-aJ-UOr"/>
+                                            <imageView width="10" height="74" alignment="left" image="Ball" contentMode="scaleAspectFit" id="uYx-ft-J39"/>
                                         </items>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </group>
@@ -34,7 +34,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="346.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

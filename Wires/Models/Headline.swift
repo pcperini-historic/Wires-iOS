@@ -24,7 +24,12 @@ struct Headline {
     // MARK: Accessors
     func readableText(callback: (readableText: String?) -> Void) {
         if self.sourceURL == nil {
-            callback(readableText: self.text)
+            if self.text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
+                callback(readableText: self.text)
+            } else {
+                callback(readableText: nil)
+            }
+            
             return
         }
         
@@ -43,6 +48,10 @@ struct Headline {
                     error: nil)
                 
                 var readableText = attributedText?.string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+                if readableText?.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) ?? 0 <= 0 {
+                    readableText = nil
+                }
+                
                 callback(readableText: readableText)
             } else {
                 callback(readableText: nil)
